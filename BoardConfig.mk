@@ -76,6 +76,10 @@ BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     system
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 9122611200
 
+# Separate vendor partition (fixes: "could not make way for new symlink: root/vendor")
+TARGET_COPY_OUT_VENDOR := vendor
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+
 # File systems
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
